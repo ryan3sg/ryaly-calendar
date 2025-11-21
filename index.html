@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="img/logo.png" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Ryaly Post Calendar</title>
+    <meta name="description" content="This template provides a snapshot to Ryaly Staycation Calendar." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      import("./src/main.tsx").then(
+        function(res) {
+          res.mountWidget({
+            containerId: "root",
+          })
+        },
+        function(err) {
+          console.error("Error:", err);
+        }
+      );
+    </script>
+  </body>
+</html>

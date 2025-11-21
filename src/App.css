@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "Jimmy";
+  src: url("fonts/jimmyscript.woff2") format("woff2"),
+    url("fonts/jimmyscript.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#calendar {
+  position: relative;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 50px;
+  background-image: url("img/background2.png");
+  background-repeat: repeat-y;
+  background-position: top right;
+  background-size: 40% auto;
+}
+#calendar:before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("img/background1.png");
+  background-repeat: repeat-y;
+  background-position: top left;
+  background-size: 80% auto;
+}
+.calendar-title {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  padding-top: 20px;
+}
+.calendar-logo {
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+  left: 20px;
+}
+.calendar-month {
+  font-family: "Jimmy";
+  font-size: 80px;
+  font-weight: 300;
+  color: #837163;
+  margin: 0;
+}
+.calendar-weak {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  padding: 6px;
+}
+.calendar-weakdays {
+  text-align: center;
+  padding: 8px;
+  background-color: #f6e5cb;
+}
+.calendar-weakdays.end {
+  background-color: #c0b9b3;
+}
+.calendar-dates {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-right: 4px dashed #e5c9a1;
+  border-bottom: 4px dashed #e5c9a1;
+}
+.calendar-days {
+  position: relative;
+  min-height: 100px;
+  text-align: left;
+  line-height: 100%;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-left: 4px dashed #e5c9a1;
+  border-top: 4px dashed #e5c9a1;
+}
+.calendar-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+}
+.calendar-buttons {
+  position: relative;
+  margin: 50px 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+.calendar-buttons button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid;
+  border-radius: 0;
+  width: 200px;
+  height: 150px;
+}
+.calendar-toggle.active {
+  border: 1px solid #00ff0d;
+  background-color: #00ff0d;
+}
+
+@media (max-width: 768px) {
+  .calendar-month {
+    font-size: 50px;
+  }
+  .calendar-logo {
+    width: 70px;
+    left: 0;
+  }
+  #calendar {
+    padding: 15px;
+  }
+  .calendar-title {
+    justify-content: flex-end;
+    padding-top: 0;
+  }
+  .calendar-weakdays {
+    padding: 4px;
+  }
+  .calendar-weak {
+    font-size: 12px;
+    gap: 8px;
+    padding: 4px;
+  }
+  .calendar-days {
+    min-height: 70px;
+  }
+  .calendar-block {
+    width: 40px;
+    height: 40px;
+    top: 60%;
+  }
+}
